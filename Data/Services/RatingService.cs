@@ -1,10 +1,12 @@
+using Microsoft.EntityFrameworkCore;
 namespace neighborhoodFlavors.Data;
 
-
-public class RatingService {
+public class RatingService
+{
     private AppDbContext dbContext;
 
-    public RatingService(AppDbContext dbContext) {
+    public RatingService(AppDbContext dbContext)
+    {
         this.dbContext = dbContext;
     }
 
@@ -27,11 +29,13 @@ public class RatingService {
         return rating;
     }
 
-    public async Task<Rating> UpdateRatingAsync(Rating rating) {
+    public async Task<Rating> UpdateRatingAsync(Rating rating)
+    {
         try
         {
             var RatingExist = dbContext.Rating.FirstOrDefault(r => r.Id == rating.Id);
-            if(RatingExist != null) {
+            if (RatingExist != null)
+            {
                 dbContext.Rating.Update(rating);
                 await dbContext.SaveChangesAsync();
             }

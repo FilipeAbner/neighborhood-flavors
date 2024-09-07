@@ -1,10 +1,12 @@
+using Microsoft.EntityFrameworkCore;
 namespace neighborhoodFlavors.Data;
 
-
-public class RestaurantService {
+public class RestaurantService
+{
     private AppDbContext dbContext;
 
-    public RestaurantService(AppDbContext dbContext) {
+    public RestaurantService(AppDbContext dbContext)
+    {
         this.dbContext = dbContext;
     }
 
@@ -27,11 +29,13 @@ public class RestaurantService {
         return restaurant;
     }
 
-    public async Task<Restaurant> UpdateRestaurantAsync(Restaurant restaurant) {
+    public async Task<Restaurant> UpdateRestaurantAsync(Restaurant restaurant)
+    {
         try
         {
             var RestaurantExist = dbContext.Restaurant.FirstOrDefault(r => r.Id == restaurant.Id);
-            if(RestaurantExist != null) {
+            if (RestaurantExist != null)
+            {
                 dbContext.Restaurant.Update(restaurant);
                 await dbContext.SaveChangesAsync();
             }

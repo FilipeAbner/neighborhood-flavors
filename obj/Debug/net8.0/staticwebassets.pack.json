@@ -1,0 +1,41 @@
+{
+  "Files": [
+    {
+      "Id": "/mnt/01DAA14342CE0650/Faculdade/optativas/dot-NET/trabalho-final/obj/Debug/net8.0/scopedcss/projectbundle/trabalho-final.bundle.scp.css",
+      "PackagePath": "staticwebassets/trabalho-final.bundle.scp.css"
+    },
+    {
+      "Id": "/mnt/01DAA14342CE0650/Faculdade/optativas/dot-NET/trabalho-final/wwwroot/app.css",
+      "PackagePath": "staticwebassets/app.css"
+    },
+    {
+      "Id": "/mnt/01DAA14342CE0650/Faculdade/optativas/dot-NET/trabalho-final/wwwroot/bootstrap/bootstrap.min.css",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css"
+    },
+    {
+      "Id": "/mnt/01DAA14342CE0650/Faculdade/optativas/dot-NET/trabalho-final/wwwroot/bootstrap/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/mnt/01DAA14342CE0650/Faculdade/optativas/dot-NET/trabalho-final/wwwroot/favicon.png",
+      "PackagePath": "staticwebassets/favicon.png"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.trabalho-final.props",
+      "PackagePath": "build\\trabalho-final.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.trabalho-final.props",
+      "PackagePath": "buildMultiTargeting\\trabalho-final.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.trabalho-final.props",
+      "PackagePath": "buildTransitive\\trabalho-final.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.trabalho-final.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,5 +1,4 @@
 using Microsoft.EntityFrameworkCore;
-
 namespace neighborhoodFlavors.Data;
 
 public class CommentService

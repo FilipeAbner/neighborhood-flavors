@@ -1,14 +1,16 @@
+using Microsoft.EntityFrameworkCore;
 namespace neighborhoodFlavors.Data;
 
-
-public class UserService {
+public class UserService
+{
     private AppDbContext dbContext;
 
-    public UserService(AppDbContext dbContext) {
+    public UserService(AppDbContext dbContext)
+    {
         this.dbContext = dbContext;
     }
 
-        public async Task<List<User>> GetUsersAsync()
+    public async Task<List<User>> GetUsersAsync()
     {
         return await dbContext.User.ToListAsync();
     }
@@ -27,11 +29,13 @@ public class UserService {
         return user;
     }
 
-    public async Task<User> UpdateUserAsync(User user) {
+    public async Task<User> UpdateUserAsync(User user)
+    {
         try
         {
             var UserExist = dbContext.User.FirstOrDefault(u => u.Id == user.Id);
-            if(UserExist != null) {
+            if (UserExist != null)
+            {
                 dbContext.User.Update(user);
                 await dbContext.SaveChangesAsync();
             }

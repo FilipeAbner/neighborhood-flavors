@@ -1,13 +1,15 @@
+using Microsoft.EntityFrameworkCore;
 namespace neighborhoodFlavors.Data;
 
-
-public class ItemService {
+public class ItemService
+{
     private AppDbContext dbContext;
 
-    public ItemService(AppDbContext dbContext) {
+    public ItemService(AppDbContext dbContext)
+    {
         this.dbContext = dbContext;
     }
-    
+
     public async Task<List<Item>> GetItemsAsync()
     {
         return await dbContext.Item.ToListAsync();
@@ -27,11 +29,13 @@ public class ItemService {
         return item;
     }
 
-    public async Task<Item> UpdateItemAsync(Item item) {
+    public async Task<Item> UpdateItemAsync(Item item)
+    {
         try
         {
             var ItemExist = dbContext.Item.FirstOrDefault(i => i.Id == item.Id);
-            if(ItemExist != null) {
+            if (ItemExist != null)
+            {
                 dbContext.Item.Update(item);
                 await dbContext.SaveChangesAsync();
             }
