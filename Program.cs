@@ -1,10 +1,19 @@
 using trabalho_final.Components;
+using neighborhoodFlavors.Data;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+builder.Services.AddDbContext<AppDbContext>
+(options =>
+{
+    options.UseSqlite("Data Source=neighborhoodFlavors.db");
+});
+builder.Services.AddScoped<ProdutoServices>();
 
 var app = builder.Build();
 
