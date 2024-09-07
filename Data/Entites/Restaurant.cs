@@ -1,5 +1,5 @@
 namespace neighborhoodFlavors.Data;
-class Restaurant
+public class Restaurant
 {
     public int Id { get; set; }
     public String Name { get; set; }
