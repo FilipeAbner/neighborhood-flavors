@@ -13,7 +13,13 @@ builder.Services.AddDbContext<AppDbContext>
 {
     options.UseSqlite("Data Source=neighborhoodFlavors.db");
 });
-builder.Services.AddScoped<ProdutoServices>();
+
+builder.Services.AddScoped<MenuService>();
+builder.Services.AddScoped<ItemService>();
+builder.Services.AddScoped<CommentService>();
+builder.Services.AddScoped<RatingService>();
+builder.Services.AddScoped<RestaurantService>();
+builder.Services.AddScoped<UserService>();
 
 var app = builder.Build();
 
