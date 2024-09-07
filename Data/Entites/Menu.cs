@@ -1,3 +1,5 @@
+namespace neighborhoodFlavors.Data;
+
 class Menu
 {
     public int Id { get; set; }

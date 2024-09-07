@@ -1,3 +1,5 @@
+namespace neighborhoodFlavors.Data;
+
 class Rating
 {
     public int Id { get; set; }
