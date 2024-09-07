@@ -1,11 +1,12 @@
 namespace neighborhoodFlavors.Data;
 
-public class CommentService
-{
+
+public class UserService {
     private AppDbContext dbContext;
 
-    public CommentService(AppDbContext dbContext)
-    {
+    public UserService(AppDbContext dbContext) {
         this.dbContext = dbContext;
     }
+
+
 }

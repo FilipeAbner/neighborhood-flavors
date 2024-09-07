@@ -2573,19 +2573,19 @@
     ]
   },
   "packageFolders": {
-    "/home/gabrielsizilio/.nuget/packages/": {}
+    "/home/yodemis/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/mnt/01DAA14342CE0650/Faculdade/optativas/dot-NET/trabalho-final/trabalho-final.csproj",
+      "projectUniqueName": "/home/yodemis/Documentos/faculdade/Optativas/Desenvolvimento Ambiente Microsoft NET/neighborhood-flavors/trabalho-final.csproj",
       "projectName": "trabalho-final",
-      "projectPath": "/mnt/01DAA14342CE0650/Faculdade/optativas/dot-NET/trabalho-final/trabalho-final.csproj",
-      "packagesPath": "/home/gabrielsizilio/.nuget/packages/",
-      "outputPath": "/mnt/01DAA14342CE0650/Faculdade/optativas/dot-NET/trabalho-final/obj/",
+      "projectPath": "/home/yodemis/Documentos/faculdade/Optativas/Desenvolvimento Ambiente Microsoft NET/neighborhood-flavors/trabalho-final.csproj",
+      "packagesPath": "/home/yodemis/.nuget/packages/",
+      "outputPath": "/home/yodemis/Documentos/faculdade/Optativas/Desenvolvimento Ambiente Microsoft NET/neighborhood-flavors/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/home/gabrielsizilio/.nuget/NuGet/NuGet.Config"
+        "/home/yodemis/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -2603,6 +2603,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -2645,7 +2650,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.108/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/snap/dotnet-sdk/250/sdk/8.0.400/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
