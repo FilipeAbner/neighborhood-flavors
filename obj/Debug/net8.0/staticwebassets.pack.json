@@ -1,23 +1,23 @@
 {
   "Files": [
     {
-      "Id": "/mnt/01DAA14342CE0650/Faculdade/optativas/dot-NET/trabalho-final/obj/Debug/net8.0/scopedcss/projectbundle/trabalho-final.bundle.scp.css",
+      "Id": "/home/yodemis/Documentos/faculdade/Optativas/Desenvolvimento Ambiente Microsoft NET/neighborhood-flavors/obj/Debug/net8.0/scopedcss/projectbundle/trabalho-final.bundle.scp.css",
       "PackagePath": "staticwebassets/trabalho-final.bundle.scp.css"
     },
     {
-      "Id": "/mnt/01DAA14342CE0650/Faculdade/optativas/dot-NET/trabalho-final/wwwroot/app.css",
+      "Id": "/home/yodemis/Documentos/faculdade/Optativas/Desenvolvimento Ambiente Microsoft NET/neighborhood-flavors/wwwroot/app.css",
       "PackagePath": "staticwebassets/app.css"
     },
     {
-      "Id": "/mnt/01DAA14342CE0650/Faculdade/optativas/dot-NET/trabalho-final/wwwroot/bootstrap/bootstrap.min.css",
+      "Id": "/home/yodemis/Documentos/faculdade/Optativas/Desenvolvimento Ambiente Microsoft NET/neighborhood-flavors/wwwroot/bootstrap/bootstrap.min.css",
       "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css"
     },
     {
-      "Id": "/mnt/01DAA14342CE0650/Faculdade/optativas/dot-NET/trabalho-final/wwwroot/bootstrap/bootstrap.min.css.map",
+      "Id": "/home/yodemis/Documentos/faculdade/Optativas/Desenvolvimento Ambiente Microsoft NET/neighborhood-flavors/wwwroot/bootstrap/bootstrap.min.css.map",
       "PackagePath": "staticwebassets/bootstrap/bootstrap.min.css.map"
     },
     {
-      "Id": "/mnt/01DAA14342CE0650/Faculdade/optativas/dot-NET/trabalho-final/wwwroot/favicon.png",
+      "Id": "/home/yodemis/Documentos/faculdade/Optativas/Desenvolvimento Ambiente Microsoft NET/neighborhood-flavors/wwwroot/favicon.png",
       "PackagePath": "staticwebassets/favicon.png"
     },
     {

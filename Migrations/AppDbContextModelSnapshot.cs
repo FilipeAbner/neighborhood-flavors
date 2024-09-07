@@ -27,17 +27,54 @@ namespace trabalhofinal.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("MenuId")
+                    b.Property<int>("MenuId")
                         .HasColumnType("INTEGER");
 
                     b.Property<DateTime>("PublishDate")
                         .HasColumnType("TEXT");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
 
                     b.HasIndex("MenuId");
 
                     b.ToTable("Comment");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CommentText = "Comida muito boa!",
+                            MenuId = 1,
+                            PublishDate = new DateTime(2024, 9, 7, 20, 11, 40, 598, DateTimeKind.Local).AddTicks(5543),
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CommentText = "Atendimento excelente",
+                            MenuId = 2,
+                            PublishDate = new DateTime(2024, 9, 7, 20, 11, 40, 598, DateTimeKind.Local).AddTicks(5587),
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CommentText = "Pouca variedade de pratos",
+                            MenuId = 1,
+                            PublishDate = new DateTime(2024, 9, 7, 20, 11, 40, 598, DateTimeKind.Local).AddTicks(5592),
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CommentText = "Recomendo o restaurante",
+                            MenuId = 2,
+                            PublishDate = new DateTime(2024, 9, 7, 20, 11, 40, 598, DateTimeKind.Local).AddTicks(5596),
+                            UserId = 3
+                        });
                 });
 
             modelBuilder.Entity("neighborhoodFlavors.Data.Item", b =>
@@ -50,14 +87,68 @@ namespace trabalhofinal.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("MenuId")
-                        .HasColumnType("INTEGER");
-
                     b.HasKey("Id");
 
-                    b.HasIndex("MenuId");
-
                     b.ToTable("Item");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            ItemName = "Carne bovina"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            ItemName = "Carne Suina"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            ItemName = "Couve de Flor"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            ItemName = "Arroz"
+                        });
+                });
+
+            modelBuilder.Entity("neighborhoodFlavors.Data.ItemMenu", b =>
+                {
+                    b.Property<int>("MenuId")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("ItemId")
+                        .HasColumnType("INTEGER");
+
+                    b.HasKey("MenuId", "ItemId");
+
+                    b.HasIndex("ItemId");
+
+                    b.ToTable("ItemMenus");
+
+                    b.HasData(
+                        new
+                        {
+                            MenuId = 1,
+                            ItemId = 1
+                        },
+                        new
+                        {
+                            MenuId = 2,
+                            ItemId = 2
+                        },
+                        new
+                        {
+                            MenuId = 1,
+                            ItemId = 3
+                        },
+                        new
+                        {
+                            MenuId = 2,
+                            ItemId = 4
+                        });
                 });
 
             modelBuilder.Entity("neighborhoodFlavors.Data.Menu", b =>
@@ -66,7 +157,7 @@ namespace trabalhofinal.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("RestaurantId")
+                    b.Property<int>("RestaurantId")
                         .HasColumnType("INTEGER");
 
                     b.Property<double>("avgRating")
@@ -77,6 +168,20 @@ namespace trabalhofinal.Migrations
                     b.HasIndex("RestaurantId");
 
                     b.ToTable("Menu");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            RestaurantId = 1,
+                            avgRating = 4.5
+                        },
+                        new
+                        {
+                            Id = 2,
+                            RestaurantId = 2,
+                            avgRating = 4.0
+                        });
                 });
 
             modelBuilder.Entity("neighborhoodFlavors.Data.Rating", b =>
@@ -85,10 +190,13 @@ namespace trabalhofinal.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("INTEGER");
 
-                    b.Property<int?>("MenuId")
+                    b.Property<int>("MenuId")
                         .HasColumnType("INTEGER");
 
                     b.Property<int>("Score")
+                        .HasColumnType("INTEGER");
+
+                    b.Property<int>("UserId")
                         .HasColumnType("INTEGER");
 
                     b.HasKey("Id");
@@ -96,6 +204,36 @@ namespace trabalhofinal.Migrations
                     b.HasIndex("MenuId");
 
                     b.ToTable("Rating");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            MenuId = 1,
+                            Score = 5,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 2,
+                            MenuId = 2,
+                            Score = 4,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 3,
+                            MenuId = 1,
+                            Score = 3,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 4,
+                            MenuId = 2,
+                            Score = 5,
+                            UserId = 3
+                        });
                 });
 
             modelBuilder.Entity("neighborhoodFlavors.Data.Restaurant", b =>
@@ -108,9 +246,26 @@ namespace trabalhofinal.Migrations
                         .IsRequired()
                         .HasColumnType("TEXT");
 
+                    b.Property<int>("UserId")
+                        .HasColumnType("INTEGER");
+
                     b.HasKey("Id");
 
                     b.ToTable("Restaurant");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Name = "Cozinharte",
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Name = "Suzy",
+                            UserId = 1
+                        });
                 });
 
             modelBuilder.Entity("neighborhoodFlavors.Data.User", b =>
@@ -134,41 +289,87 @@ namespace trabalhofinal.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("User");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Email = "suzy@gmail.com",
+                            Name = "Suzy",
+                            Password = "senha123"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Email = "cozinharte@gmail.com",
+                            Name = "Cozinharte",
+                            Password = "senha456"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Email = "filipe@gmail.com",
+                            Name = "Filipe",
+                            Password = "123456"
+                        });
                 });
 
             modelBuilder.Entity("neighborhoodFlavors.Data.Comment", b =>
                 {
                     b.HasOne("neighborhoodFlavors.Data.Menu", null)
                         .WithMany("Comments")
-                        .HasForeignKey("MenuId");
+                        .HasForeignKey("MenuId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
-            modelBuilder.Entity("neighborhoodFlavors.Data.Item", b =>
+            modelBuilder.Entity("neighborhoodFlavors.Data.ItemMenu", b =>
                 {
-                    b.HasOne("neighborhoodFlavors.Data.Menu", null)
-                        .WithMany("Itens")
-                        .HasForeignKey("MenuId");
+                    b.HasOne("neighborhoodFlavors.Data.Item", "Item")
+                        .WithMany("ItemMenus")
+                        .HasForeignKey("ItemId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("neighborhoodFlavors.Data.Menu", "Menu")
+                        .WithMany("ItemMenus")
+                        .HasForeignKey("MenuId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Item");
+
+                    b.Navigation("Menu");
                 });
 
             modelBuilder.Entity("neighborhoodFlavors.Data.Menu", b =>
                 {
                     b.HasOne("neighborhoodFlavors.Data.Restaurant", null)
                         .WithMany("Menus")
-                        .HasForeignKey("RestaurantId");
+                        .HasForeignKey("RestaurantId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("neighborhoodFlavors.Data.Rating", b =>
                 {
                     b.HasOne("neighborhoodFlavors.Data.Menu", null)
                         .WithMany("Ratings")
-                        .HasForeignKey("MenuId");
+                        .HasForeignKey("MenuId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+                });
+
+            modelBuilder.Entity("neighborhoodFlavors.Data.Item", b =>
+                {
+                    b.Navigation("ItemMenus");
                 });
 
             modelBuilder.Entity("neighborhoodFlavors.Data.Menu", b =>
                 {
                     b.Navigation("Comments");
 
-                    b.Navigation("Itens");
+                    b.Navigation("ItemMenus");
 
                     b.Navigation("Ratings");
                 });
