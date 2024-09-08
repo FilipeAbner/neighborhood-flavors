@@ -10,10 +10,20 @@ public class MenuService
         this.dbContext = dbContext;
     }
 
-    public async Task<List<Menu>> GetMenusAsync()
+    public async Task<List<Menu>> GetAllMenusAsync()
     {
-        // return await dbContext.Menu.ToListAsync();
         return await dbContext.Menu
+            .Include(m => m.ItemMenus)     
+                .ThenInclude(im => im.Item)
+            .Include(m => m.Ratings)
+            .Include(m => m.Comments)  
+            .ToListAsync();
+    }
+
+    public async Task<List<Menu>> GetMenusByRestaurantIdAsync(int restaurantId)
+    {
+        return await dbContext.Menu
+            .Where(m => m.RestaurantId == restaurantId)
             .Include(m => m.ItemMenus)     
                 .ThenInclude(im => im.Item)
             .Include(m => m.Ratings)

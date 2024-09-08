@@ -10,9 +10,8 @@ public class RestaurantService
         this.dbContext = dbContext;
     }
 
-    public async Task<List<Restaurant>> GetRestaurantsAsync()
+    public async Task<List<Restaurant>> GetAllRestaurantsAsync()
     {
-        // return await dbContext.Restaurant.Include(r => r.Menus).ToListAsync();
         return await dbContext.Restaurant
         .Include(r => r.Menus)
             .ThenInclude(m => m.ItemMenus)

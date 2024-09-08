@@ -58,9 +58,8 @@
 
 @code {
     List<Restaurant> Restaurants = new List<Restaurant>();
-    string? statusMsg = "";
     private async Task GetRestaurants() {
-        Restaurants = await service.GetRestaurantsAsync();
+        Restaurants = await service.GetAllRestaurantsAsync();
     }
 
     protected override async Task
