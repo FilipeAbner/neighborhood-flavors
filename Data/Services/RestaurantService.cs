@@ -12,8 +12,17 @@ public class RestaurantService
 
     public async Task<List<Restaurant>> GetRestaurantsAsync()
     {
-        return await dbContext.Restaurant.ToListAsync();
-    }
+        // return await dbContext.Restaurant.Include(r => r.Menus).ToListAsync();
+        return await dbContext.Restaurant
+        .Include(r => r.Menus)
+            .ThenInclude(m => m.ItemMenus)
+                .ThenInclude(im => im.Item)
+        .Include(r => r.Menus)
+            .ThenInclude(m => m.Ratings)
+        .Include(r => r.Menus)
+            .ThenInclude(m => m.Comments)
+        .ToListAsync();
+        }
 
     public async Task<Restaurant> AddRestaurantAsync(Restaurant restaurant)
     {

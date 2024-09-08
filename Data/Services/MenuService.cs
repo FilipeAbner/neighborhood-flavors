@@ -12,7 +12,13 @@ public class MenuService
 
     public async Task<List<Menu>> GetMenusAsync()
     {
-        return await dbContext.Menu.ToListAsync();
+        // return await dbContext.Menu.ToListAsync();
+        return await dbContext.Menu
+            .Include(m => m.ItemMenus)     
+                .ThenInclude(im => im.Item)
+            .Include(m => m.Ratings)
+            .Include(m => m.Comments)  
+            .ToListAsync();
     }
 
     public async Task<Menu> AddMenuAsync(Menu menu)

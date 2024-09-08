@@ -1,0 +1,55 @@
+@page "/createmenu"
+@rendermode InteractiveServer
+@attribute [StreamRendering]
+@inject IJSRuntime JsRuntime
+@inject MenuService service
+
+<div class="container">
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>Id</th>
+                <th>Nota Media</th>
+                <th>comentários</th>
+                <th>Avalialções</th>
+                <th>Itens</th>
+            </tr>
+        </thead>
+        <tbody> @if(Menus.Any()) {
+            @foreach (var menu in Menus) {
+                <tr><td>@menu.Id</td>
+                <td>@menu.avgRating</td>
+                <td>@foreach (var comment in menu.Comments) { <p> @comment.CommentText </p>}</td>
+                <td>@foreach (var rating in menu.Ratings) { <p> @rating.Score </p>}</td>
+                <td>@foreach (var itemMenu in menu.ItemMenus) { <p> @itemMenu.Item.ItemName </p>}</td>
+                <td><button class="btn btn-danger" @onclick="(() => DeleteMenu(menu))">Deletar</button></td></tr>
+            }
+        } else {
+            <tr><td colspan="6"><strong>Nenhum menu disponivel</strong></td></tr>
+        }
+        </tbody>
+    </table>
+    <p style="color: red;"><strong>@statusMsg</strong></p>
+</div>
+
+@code {
+    List<Menu> Menus = new List<Menu>();
+    string? statusMsg = "";
+    private async Task GetMenus() {
+        Menus = await service.GetMenusAsync();
+    }
+
+    private async Task DeleteMenu(Menu menu) {
+        bool confirm = await JsRuntime.InvokeAsync<bool>("confirm", "Tem Certeza que deseja excluir?");
+        if(confirm) {
+            await service.DeleteMenuAsync(menu);
+            statusMsg = "Menu deletado com sucesso!";
+            await GetMenus();
+        }
+    }
+
+    protected override async Task
+    OnInitializedAsync(){
+        await GetMenus();
+    }
+}
