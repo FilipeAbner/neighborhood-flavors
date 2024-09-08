@@ -83,7 +83,8 @@ public class AppDbContext : DbContext
         return new List<Menu>
         {
             new Menu { Id = 1, avgRating = 4.5 , RestaurantId = 1},  
-            new Menu { Id = 2, avgRating = 4.0 , RestaurantId = 2}
+            new Menu { Id = 2, avgRating = 4.0 , RestaurantId = 2},
+            new Menu { Id = 3, avgRating = 4.75 , RestaurantId = 1} 
         };
     }
 
@@ -105,7 +106,11 @@ public class AppDbContext : DbContext
             new ItemMenu { ItemId = 1, MenuId = 1 },
             new ItemMenu { ItemId = 2, MenuId = 2 },
             new ItemMenu { ItemId = 3, MenuId = 1 },
-            new ItemMenu { ItemId = 4, MenuId = 2 }
+            new ItemMenu { ItemId = 4, MenuId = 2 },
+            new ItemMenu { ItemId = 1, MenuId = 3 },
+            new ItemMenu { ItemId = 2, MenuId = 3 },
+            new ItemMenu { ItemId = 3, MenuId = 3 },
+            new ItemMenu { ItemId = 4, MenuId = 3 }
         };
     }
 

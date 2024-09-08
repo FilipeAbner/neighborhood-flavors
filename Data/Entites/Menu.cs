@@ -1,6 +1,6 @@
 namespace neighborhoodFlavors.Data;
 
- public class Menu
+public class Menu
 {
     public int Id { get; set; }
     public List<ItemMenu> ItemMenus { get; set; } = [];
