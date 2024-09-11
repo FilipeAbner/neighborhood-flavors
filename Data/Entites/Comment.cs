@@ -7,4 +7,5 @@ public class Comment
     public DateTime PublishDate { get; set; }
     public int MenuId { get; set; }
     public int UserId { get; set; }
+    public User User { get; set; }
 }

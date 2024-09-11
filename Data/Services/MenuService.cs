@@ -23,12 +23,14 @@ public class MenuService
     public async Task<List<Menu>> GetMenusByRestaurantIdAsync(int restaurantId)
     {
         return await dbContext.Menu
-            .Where(m => m.RestaurantId == restaurantId)
-            .Include(m => m.ItemMenus)     
-                .ThenInclude(im => im.Item)
-            .Include(m => m.Ratings)
-            .Include(m => m.Comments)  
-            .ToListAsync();
+        .Where(m => m.RestaurantId == restaurantId)
+        .Include(m => m.ItemMenus)     
+            .ThenInclude(im => im.Item)
+        .Include(m => m.Ratings)
+            .ThenInclude(r => r.User)
+        .Include(m => m.Comments)
+            .ThenInclude(c => c.User) 
+        .ToListAsync();
     }
 
     public async Task<Menu> AddMenuAsync(Menu menu)

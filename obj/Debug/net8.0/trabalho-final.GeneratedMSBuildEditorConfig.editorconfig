@@ -22,20 +22,16 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9BcHAucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/yodemis/Documentos/faculdade/Optativas/Desenvolvimento Ambiente Microsoft NET/neighborhood-flavors/Components/Pages/CreateMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9DcmVhdGVNZW51LnJhem9y
-build_metadata.AdditionalFiles.CssScope = 
-
-[/home/yodemis/Documentos/faculdade/Optativas/Desenvolvimento Ambiente Microsoft NET/neighborhood-flavors/Components/Pages/Error.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9FcnJvci5yYXpvcg==
-build_metadata.AdditionalFiles.CssScope = 
-
 [/home/yodemis/Documentos/faculdade/Optativas/Desenvolvimento Ambiente Microsoft NET/neighborhood-flavors/Components/Pages/Login.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Mb2dpbi5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/yodemis/Documentos/faculdade/Optativas/Desenvolvimento Ambiente Microsoft NET/neighborhood-flavors/Components/Pages/ViewMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9WaWV3TWVudS5yYXpvcg==
+[/home/yodemis/Documentos/faculdade/Optativas/Desenvolvimento Ambiente Microsoft NET/neighborhood-flavors/Components/Pages/ManageMenu/ManageMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9NYW5hZ2VNZW51L01hbmFnZU1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/yodemis/Documentos/faculdade/Optativas/Desenvolvimento Ambiente Microsoft NET/neighborhood-flavors/Components/Pages/ManageMenu/ViewMenuModal.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9NYW5hZ2VNZW51L1ZpZXdNZW51TW9kYWwucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/yodemis/Documentos/faculdade/Optativas/Desenvolvimento Ambiente Microsoft NET/neighborhood-flavors/Components/Routes.razor]
