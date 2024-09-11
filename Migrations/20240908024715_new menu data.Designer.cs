@@ -12,7 +12,7 @@ namespace trabalhofinal.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     [Migration("20240908024715_new menu data")]
-    partial class newmenudata
+    partial class Newmenudata
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

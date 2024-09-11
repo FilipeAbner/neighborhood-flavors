@@ -12,7 +12,7 @@ namespace trabalhofinal.Migrations
 {
     [DbContext(typeof(AppDbContext))]
     [Migration("20240907231141_initial data")]
-    partial class initialdata
+    partial class Initialdata
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

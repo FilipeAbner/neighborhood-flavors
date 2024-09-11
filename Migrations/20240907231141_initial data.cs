@@ -8,7 +8,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace trabalhofinal.Migrations
 {
     /// <inheritdoc />
-    public partial class initialdata : Migration
+    public partial class Initialdata : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
