@@ -15,55 +15,74 @@
     <div class="row mt-4">
         @foreach (var restaurant in Restaurants)
         {
-            @foreach (var menu in restaurant.Menus)
+
+            @if (restaurant.Menus!.Count() != 0)
             {
-                <div class="col-md-6 mb-4">
-                    <div class="card">
-                        <div class="card-body">
-                            <h4 class="card-title">@restaurant.Name</h4>
-                            <ul class="list-group list-group-flush">
-                                @foreach (var itemMenu in menu.ItemMenus)
-                                {
-                                    <li class="list-group-item">@itemMenu.Item.ItemName</li>
-                                }
-                            </ul>
+                @foreach (var menu in restaurant.Menus!)
+                {
+                    <div class="col-md-6 mb-4">
+                        <div class="card">
+                            <div class="card-body">
 
-                            <!-- Avaliação por Estrelas -->
-                            @* <div class="rating mt-3">
-                                <label>Avaliação:</label>
-                                <div class="stars">
-                                    @for (int i = 1; i <= 5; i++)
+                                <h4 class="card-title">@restaurant.Name</h4>
+
+                                <ul class="list-group list-group-flush">
+                                    @foreach (var itemMenu in menu.ItemMenus)
                                     {
-                                        <input type="radio" id="@($"star{i}-@menu.Id")" name="rating-@menu.Id" value="@i" />
-                                        <label for="@($"star{i}-@menu.Id")" class="star">&#9733;</label>
+                                        <li class="list-group-item">@itemMenu.Item!.ItemName</li>
                                     }
-                                }
-                            </div> *@
+                                </ul>
 
-                            <!-- Adicionar Comentário -->
-                            <div class="form-group mt-3">
-                                <label for="comment-@menu.Id">Comentário:</label>
-                                <textarea id="comment-@menu.Id" class="form-control" rows="2" placeholder="Adicione um comentário..."></textarea>
+                                <!-- Avaliação por Estrelas -->
+                                @* <div class="rating mt-3">
+                    <label>Avaliação:</label>
+                    <div class="stars">
+                    @for (int i = 1; i <= 5; i++)
+                    {
+                    <input type="radio" id="@($"star{i}-@menu.Id")" name="rating-@menu.Id" value="@i" />
+                    <label for="@($"star{i}-@menu.Id")" class="star">&#9733;</label>
+                    }
+                    }
+                    </div> *@
+
+                                <!-- Adicionar Comentário -->
+                                <div class="form-group mt-3">
+                                    <label for="comment-@menu.Id">Comentário:</label>
+                                    <textarea id="comment-@menu.Id" class="form-control" rows="2"
+                                        placeholder="Adicione um comentário..."></textarea>
+                                </div>
+
+                                <!-- Botão Enviar -->
+                                <button type="submit" class="btn btn-primary mt-3">Enviar Avaliação e Comentário</button>
                             </div>
-
-                            <!-- Botão Enviar -->
-                            <button type="submit" class="btn btn-primary mt-3">Enviar Avaliação e Comentário</button>
                         </div>
                     </div>
+                }
+
+            }
+            else
+            {
+                <div>
+                    <p>
+                        Não existe cardápios cadastrados!
+                    </p>
                 </div>
             }
+
         }
     </div>
 </div>
 
 @code {
     List<Restaurant> Restaurants = new List<Restaurant>();
-    private async Task GetRestaurants() {
+    private async Task GetRestaurants()
+    {
         Restaurants = await service.GetAllRestaurantsAsync();
     }
 
     protected override async Task
-    OnInitializedAsync(){
+    OnInitializedAsync()
+    {
         await GetRestaurants();
     }
 }
