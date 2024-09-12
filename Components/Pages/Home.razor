@@ -15,10 +15,9 @@
     <div class="row mt-4">
         @foreach (var restaurant in Restaurants)
         {
-
             @if (restaurant.Menus!.Count() != 0)
             {
-                @foreach (var menu in restaurant.Menus!)
+                @foreach (var menu in restaurant.Menus.Take(1)!)
                 {
                     <div class="col-md-6 mb-4">
                         <div class="card">

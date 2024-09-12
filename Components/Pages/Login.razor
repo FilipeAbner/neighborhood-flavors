@@ -1,7 +1,10 @@
 @page "/login"
 @rendermode InteractiveServer
-@inject UserService service
+@inject UserService userService
+@inject RestaurantService restaurantService
 @inject NavigationManager navigationManager
+
+@inject StateContainer stateContainer
 
 <PageTitle>Login</PageTitle>
 <div class="d-flex align-items-center justify-content-center vh-100">
@@ -47,14 +50,26 @@
 
     private async Task LoginUser()
     {
-        user = await service.GetUserByEmailAndPassword(Email, Password);
+        user = await userService.GetUserByEmailAndPassword(Email, Password);
         if (user != null)
         {
-            navigationManager.NavigateTo("/manage-menu");
+            var restaurant = await restaurantService.GetRestaurantByUserIdAsync(user.Id);
+
+            if (restaurant == null)
+            {
+                navigationManager.NavigateTo("/");
+            }
+            else
+            {
+                stateContainer.CurrentRestaurant = restaurant;
+                stateContainer.CurrentUser = user;
+                navigationManager.NavigateTo("/manage-menu");
+            }
         }
+
         else
         {
             errorMessage = "Credenciais inválidas. Tente novamente.";
         }
     }
-}
+} using Microsoft.EntityFrameworkCore;

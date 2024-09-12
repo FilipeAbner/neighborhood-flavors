@@ -20,6 +20,7 @@ builder.Services.AddScoped<CommentService>();
 builder.Services.AddScoped<RatingService>();
 builder.Services.AddScoped<RestaurantService>();
 builder.Services.AddScoped<UserService>();
+builder.Services.AddScoped<StateContainer>();
 builder.Services.AddBlazorBootstrap();
 
 var app = builder.Build();

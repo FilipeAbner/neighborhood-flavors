@@ -4,13 +4,24 @@
 @inject IJSRuntime JsRuntime
 @inject MenuService service
 
+@inject StateContainer stateContainer
+
 <PageTitle>Restaurante - Cardápios</PageTitle>
 
 <div class="container mt-5">
     <div class="d-flex justify-content-between align-items-center mb-3">
         <h2>Meus Cardápios</h2>
-        <button class="btn btn-success btn-padding" @onclick="() => OpenCreateMenu(1)">Novo</button>
+        <button class="btn btn-success btn-padding" @onclick="() => OpenCreateMenu(restaurant.Id)">Novo</button>
     </div>
+
+    @if (!String.IsNullOrEmpty(restaurant.Name))
+    {
+        <div>
+            <h4>
+                Seja bem-vindo ao restaurante @restaurant.Name
+            </h4>
+        </div>
+    }
 
     <div class="cardapios-grid">
 
@@ -155,12 +166,23 @@
 </style>
 
 @code {
+    protected override void OnInitialized()
+    {
+        if (stateContainer.CurrentRestaurant is not null)
+        {
+            restaurant = stateContainer.CurrentRestaurant;
+        }
+    }
+
     List<Menu> Menus = new List<Menu>();
     Menu? SelectedMenu { get; set; }
     private ElementReference? ModalElement { get; set; }
+
     ViewMenuModal viewMenu = default!;
     CreateMenuModal createMenu = default!;
     EditMenuModal editMenu = default!;
+    Restaurant restaurant = new();
+
     private async Task OpenViewMenu(Menu menu)
     {
         await viewMenu.OpenMenuModal(menu);
@@ -177,7 +199,7 @@
 
     private async Task GetMenus()
     {
-        Menus = await service.GetMenusByRestaurantIdAsync(1);
+        Menus = await service.GetMenusByRestaurantIdAsync(restaurant.Id);
     }
 
     private async Task DeleteMenu(Menu menu)

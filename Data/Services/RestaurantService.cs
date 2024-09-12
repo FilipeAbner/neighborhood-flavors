@@ -21,7 +21,7 @@ public class RestaurantService
         .Include(r => r.Menus)
             .ThenInclude(m => m.Comments)
         .ToListAsync();
-        }
+    }
 
     public async Task<Restaurant> AddRestaurantAsync(Restaurant restaurant)
     {
@@ -68,4 +68,10 @@ public class RestaurantService
         }
     }
 
+    public async Task<Restaurant?> GetRestaurantByUserIdAsync(int userId)
+    {
+        return await dbContext.Restaurant
+            .Where(r => r.UserId == userId)
+            .FirstOrDefaultAsync();
+    }
 }
