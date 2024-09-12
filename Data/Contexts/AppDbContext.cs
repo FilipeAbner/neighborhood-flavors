@@ -17,21 +17,29 @@ public class AppDbContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
-        // Relacionamento Restaurant -> Menu (One-to-Many)
-        modelBuilder.Entity<Restaurant>()
-            .HasMany(r => r.Menus);
+         modelBuilder.Entity<Restaurant>()
+            .HasMany(r => r.Menus)
+            .WithOne() 
+            .HasForeignKey(m => m.RestaurantId)
+            .OnDelete(DeleteBehavior.Cascade);
 
-        // Relacionamento Menu -> Comment (One-to-Many)
         modelBuilder.Entity<Menu>()
-            .HasMany(m => m.Comments);
+            .HasMany(m => m.Comments)
+            .WithOne()
+            .HasForeignKey(c => c.MenuId)
+            .OnDelete(DeleteBehavior.Cascade); 
 
-        // Relacionamento Menu -> Rating (One-to-Many)
         modelBuilder.Entity<Menu>()
-            .HasMany(m => m.Ratings);
+            .HasMany(m => m.Ratings)
+            .WithOne()
+            .HasForeignKey(r => r.MenuId)
+            .OnDelete(DeleteBehavior.Cascade); 
 
-        // Relacionamento Many-to-Many entre Menu e Item
         modelBuilder.Entity<Menu>()
-            .HasMany(m => m.ItemMenus);
+            .HasMany(m => m.ItemMenus)
+            .WithOne(im => im.Menu)
+            .HasForeignKey(im => im.MenuId)
+            .OnDelete(DeleteBehavior.Cascade);
 
         modelBuilder.Entity<ItemMenu>()
         .HasKey(im => new { im.Id });  
