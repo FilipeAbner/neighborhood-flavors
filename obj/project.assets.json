@@ -2841,19 +2841,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\gabrielsizilio\\.nuget\\packages\\": {}
+    "/home/gabrielsizilio/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Faculdade\\optativas\\dot-NET\\neighborhood-flavors\\trabalho-final.csproj",
+      "projectUniqueName": "/media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/trabalho-final.csproj",
       "projectName": "trabalho-final",
-      "projectPath": "E:\\Faculdade\\optativas\\dot-NET\\neighborhood-flavors\\trabalho-final.csproj",
-      "packagesPath": "C:\\Users\\gabrielsizilio\\.nuget\\packages\\",
-      "outputPath": "E:\\Faculdade\\optativas\\dot-NET\\neighborhood-flavors\\obj\\",
+      "projectPath": "/media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/trabalho-final.csproj",
+      "packagesPath": "/home/gabrielsizilio/.nuget/packages/",
+      "outputPath": "/media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\gabrielsizilio\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "/home/gabrielsizilio/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -2871,11 +2871,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -2922,7 +2917,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.108/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

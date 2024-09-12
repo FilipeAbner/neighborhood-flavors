@@ -1,0 +1,85 @@
+@inject MenuService service
+
+<Modal @ref="modal" title="Editar Cardápio">
+
+    <BodyTemplate>
+        <div class="card-body">
+            <h5 class="card-title text-center">Editar Cardápio</h5>
+
+            <div class="form-group">
+                <label for="itemMenu">Itens do Menu</label>
+
+                <input type="text" class="form-control" id="itemMenu" @bind="NewItemMenuName"
+                    placeholder="Digite o nome do item" />
+
+                <button class="btn btn-primary mt-2" @onclick="AddNewItemMenu">Adicionar Item</button>
+
+                <ul class="list-group mt-2">
+                    @foreach (var itemMenu in CurrentMenu.ItemMenus)
+                    {
+                        <li class="list-group-item d-flex justify-content-between align-items-center">
+                            @itemMenu.Item!.ItemName
+                            <button class="btn btn-sm p-0 text-danger" style="background-color: transparent; border: none;"
+                                @onclick="() => RemoveItemMenu(itemMenu)">X</button>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </BodyTemplate>
+
+    <FooterTemplate>
+        <Button Color="ButtonColor.Primary" @onclick="OnSaveMenuClick">Salvar</Button>
+        <Button Color="ButtonColor.Secondary" @onclick="OnHideModalClick">Cancelar</Button>
+    </FooterTemplate>
+</Modal>
+
+@code {
+    [Parameter]
+    public EventCallback<Menu> OnMenuUpdated { get; set; }
+    Menu CurrentMenu { get; set; } = new Menu();
+    private string NewItemMenuName { get; set; } = string.Empty;
+    private Modal modal = default!;
+    private int? RestaurantId;
+
+    private async Task OnHideModalClick()
+    {
+        await modal.HideAsync();
+    }
+
+    public async Task OpenEditMenuModal(Menu menu)
+    {
+
+        CurrentMenu = menu;
+        await modal.ShowAsync();
+    }
+
+    private void AddNewItemMenu()
+    {
+        if (!string.IsNullOrWhiteSpace(NewItemMenuName))
+        {
+            CurrentMenu.ItemMenus.Add(new ItemMenu
+                {
+                    Item = new Item { ItemName = NewItemMenuName }
+                });
+            NewItemMenuName = string.Empty; // Limpa o campo após adicionar
+        }
+    }
+
+    private void RemoveItemMenu(ItemMenu itemMenu)
+    {
+        CurrentMenu.ItemMenus.Remove(itemMenu);
+    }
+
+    private async Task OnSaveMenuClick()
+    {
+        await service.UpdateMenuAsync(CurrentMenu);
+
+        if (OnMenuUpdated.HasDelegate)
+        {
+            await OnMenuUpdated.InvokeAsync();
+        }
+
+        await modal.HideAsync();
+    }
+}
