@@ -6,7 +6,7 @@
             <ul class="list-group list-group-flush">
                 @foreach (var itemMenu in SelectedMenu!.ItemMenus)
                 {
-                    <li class="list-group-item">@itemMenu.Item!.ItemName</li>
+                    <li class="list-group-item wrap-text">@itemMenu.Item!.ItemName</li>
                 }
             </ul>
 
@@ -45,10 +45,19 @@
                 <label class="my-2"><strong>Comentários:</strong></label>
                 @foreach (var comment in SelectedMenu!.Comments)
                 {
-                    <div class="">
-                        <p class="mb-0">@comment.User!.Email:</p>
+                    <div class="card mb-1 p-2">
+                        <div class="mb-0">
+                            <div class="d-flex justify-content-between">
+                                <strong>
+                                    @comment.User!.Email:
+                                </strong>
+                                <p class="fst-italic">
+                                    @comment.PublishDate
+                                </p>
+                            </div>
+                        </div>
                         <div class="mx-5 stars">
-                            @comment.CommentText
+                            "@comment.CommentText"
                         </div>
                     </div>
                 }

@@ -34,14 +34,6 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9NYW5hZ2VNZW51L0VkaXRNZW51TW9kYWwucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/Components/Pages/ManageMenu/ManageMenu.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9NYW5hZ2VNZW51L01hbmFnZU1lbnUucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
-[/media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/Components/Pages/ManageMenu/ViewMenuModal.razor]
-build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9NYW5hZ2VNZW51L1ZpZXdNZW51TW9kYWwucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = 
-
 [/media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/Components/Routes.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Sb3V0ZXMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
@@ -61,3 +53,11 @@ build_metadata.AdditionalFiles.CssScope = b-yh2a18q8g3
 [/media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/Components/Pages/Home.razor]
 build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Ib21lLnJhem9y
 build_metadata.AdditionalFiles.CssScope = b-w3038hx5uu
+
+[/media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/Components/Pages/ManageMenu/ManageMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9NYW5hZ2VNZW51L01hbmFnZU1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-cekdey80d9
+
+[/media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/Components/Pages/ManageMenu/ViewMenuModal.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9NYW5hZ2VNZW51L1ZpZXdNZW51TW9kYWwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-6gnk6f680t
