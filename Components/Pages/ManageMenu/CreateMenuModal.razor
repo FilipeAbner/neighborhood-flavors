@@ -11,7 +11,7 @@
                     @foreach (var itemMenu in NewMenu.ItemMenus)
                     {
                         <li class="list-group-item d-flex justify-content-between align-items-center">
-                            @itemMenu.Item.ItemName
+                            @itemMenu.Item!.ItemName
                             <button class="btn btn-sm p-0 text-danger" style="background-color: transparent; border: none;" @onclick="() => RemoveItemMenu(itemMenu)">X</button>
                         </li>
                     }
