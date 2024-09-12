@@ -60,4 +60,10 @@ public class UserService
         }
     }
 
+    public async Task<User?> GetUserByEmailAndPassword(String email, String password)
+    {
+        return await dbContext.User
+            .Where(u => u.Email == email && u.Password == password)
+            .FirstOrDefaultAsync();
+    }
 }

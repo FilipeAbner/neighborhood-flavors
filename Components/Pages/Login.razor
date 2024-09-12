@@ -1,4 +1,7 @@
 @page "/login"
+@rendermode InteractiveServer
+@inject UserService service
+@inject NavigationManager navigationManager
 
 <PageTitle>Login</PageTitle>
 <div class="d-flex align-items-center justify-content-center vh-100">
@@ -8,25 +11,50 @@
                 <div class="card mt-5">
                     <div class="card-body">
                         <h3 class="card-title text-center">Login</h3>
-                        <form asp-action="OnPost">
+
+                        <div>
                             <div class="form-group mt-4">
-                                <label for="UserName">Nome do Usuário</label>
-                                <input type="text" class="form-control" id="UserName" placeholder="Username" />
-                                <span class="text-danger"></span>
+
+                                <label for="Email">Email</label>
+                                <input type="text" class="form-control" id="Email" placeholder="Digite seu email"
+                                    @bind="Email" />
                             </div>
+
                             <div class="form-group mt-4">
                                 <label for="Senha">Senha</label>
-                                <input type="password" class="form-control" id="Senha" placeholder="Senha"
-                                    asp-for="Password" />
-                                <span asp-validation-for="Password" class="text-danger"></span>
+                                <input type="password" class="form-control" id="Senha" placeholder="Digite sua senha"
+                                    @bind="Password" />
                             </div>
+
                             <div class="d-grid gap-2 col-6 mt-4 mx-auto">
-                                <button type="submit" class="btn btn-primary btn-block">Login</button>
+                                <button class="btn btn-primary btn-block" @onclick="LoginUser">Login</button>
                             </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
+                <span class="text-danger">@errorMessage</span>
             </div>
         </div>
     </div>
 </div>
+
+@code {
+    private string Email { get; set; } = string.Empty;
+    private string Password { get; set; } = string.Empty;
+    private string errorMessage = string.Empty;
+
+    private User? user = new();
+
+    private async Task LoginUser()
+    {
+        user = await service.GetUserByEmailAndPassword(Email, Password);
+        if (user != null)
+        {
+            navigationManager.NavigateTo("/manage-menu");
+        }
+        else
+        {
+            errorMessage = "Credenciais inválidas. Tente novamente.";
+        }
+    }
+}
