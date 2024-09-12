@@ -1,56 +1,61 @@
 <Modal @ref="modal" title="Cardápio">
     <BodyTemplate>
         <div class="card-body">
-        <h5 class="card-title text-center">Cardápio @SelectedMenu?.Id</h5>
-        <ul class="list-group list-group-flush">
-        @foreach (var itemMenu in SelectedMenu?.ItemMenus)
-        {
-            <li class="list-group-item">@itemMenu.Item.ItemName</li>
-        }
-        </ul>
-        <div class="rating mt-3 text-center">
-            <label>Avaliação    : @SelectedMenu?.avgRating</label>
-            <div class="stars">
-                @for (int i = 1; i <= 5; i++)
+            <h5 class="card-title text-center">Cardápio @SelectedMenu?.Id</h5>
+
+            <ul class="list-group list-group-flush">
+                @foreach (var itemMenu in SelectedMenu!.ItemMenus)
                 {
-                    <div class="star">
-                        <div class="star-inner" style="width:@GetStarWidth(SelectedMenu?.avgRating, i)%"></div>
-                    </div>
-                } 
-            </div> 
-        </div>
-        <div class="rating" >
-            <label class="my-2"><strong>Avaliações:</strong></label>
-                @foreach (var rating in SelectedMenu?.Ratings)
+                    <li class="list-group-item">@itemMenu.Item!.ItemName</li>
+                }
+            </ul>
+
+            <div class="rating mt-3 text-center">
+                <label>Avaliação : @SelectedMenu?.avgRating</label>
+                <div class="stars">
+                    @for (int i = 1; i <= 5; i++)
+                    {
+                        <div class="star">
+                            <div class="star-inner" style="width:@GetStarWidth(SelectedMenu?.avgRating, i)%"></div>
+                        </div>
+                    }
+                </div>
+            </div>
+
+            <div class="rating">
+                <label class="my-2"><strong>Avaliações:</strong></label>
+
+                @foreach (var rating in SelectedMenu!.Ratings)
                 {
                     <div class="d-flex ">
-                        <p class="mb-0">@rating.User.Email</p>
+                        <p class="mb-0">@rating.User!.Email</p>
                         <div class="mx-5 stars">
                             @for (int i = 1; i <= 5; i++)
                             {
                                 <div class="star">
                                     <div class="star-inner" style="width:@GetStarWidth(rating.Score, i)%"></div>
                                 </div>
-                            } 
+                            }
                         </div>
                     </div>
-                }   
-        </div>
+                }
+            </div>
 
-        <div >
-            <label class="my-2"><strong>Comentários:</strong></label>
-                @foreach (var comment in SelectedMenu?.Comments)
+            <div>
+                <label class="my-2"><strong>Comentários:</strong></label>
+                @foreach (var comment in SelectedMenu!.Comments)
                 {
                     <div class="">
-                        <p class="mb-0">@comment.User.Email:</p>
+                        <p class="mb-0">@comment.User!.Email:</p>
                         <div class="mx-5 stars">
                             @comment.CommentText
                         </div>
                     </div>
-                }   
+                }
+            </div>
         </div>
-    </div>
     </BodyTemplate>
+
     <FooterTemplate>
         <Button Color="ButtonColor.Secondary" @onclick="OnHideModalClick">Close</Button>
     </FooterTemplate>
