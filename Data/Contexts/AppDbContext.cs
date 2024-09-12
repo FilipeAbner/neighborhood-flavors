@@ -34,7 +34,7 @@ public class AppDbContext : DbContext
             .HasMany(m => m.ItemMenus);
 
         modelBuilder.Entity<ItemMenu>()
-        .HasKey(im => new { im.MenuId, im.ItemId });  
+        .HasKey(im => new { im.Id });  
 
         modelBuilder.Entity<ItemMenu>()
             .HasOne(im => im.Menu)
@@ -103,14 +103,14 @@ public class AppDbContext : DbContext
     {
         return new List<ItemMenu>
         {
-            new ItemMenu { ItemId = 1, MenuId = 1 },
-            new ItemMenu { ItemId = 2, MenuId = 2 },
-            new ItemMenu { ItemId = 3, MenuId = 1 },
-            new ItemMenu { ItemId = 4, MenuId = 2 },
-            new ItemMenu { ItemId = 1, MenuId = 3 },
-            new ItemMenu { ItemId = 2, MenuId = 3 },
-            new ItemMenu { ItemId = 3, MenuId = 3 },
-            new ItemMenu { ItemId = 4, MenuId = 3 }
+            new ItemMenu { Id= 1, ItemId = 1, MenuId = 1 },
+            new ItemMenu { Id= 2, ItemId = 2, MenuId = 2 },
+            new ItemMenu { Id= 3, ItemId = 3, MenuId = 1 },
+            new ItemMenu { Id= 4, ItemId = 4, MenuId = 2 },
+            new ItemMenu { Id= 5, ItemId = 1, MenuId = 3 },
+            new ItemMenu { Id= 6, ItemId = 2, MenuId = 3 },
+            new ItemMenu { Id= 7, ItemId = 3, MenuId = 3 },
+            new ItemMenu { Id= 8, ItemId = 4, MenuId = 3 }
         };
     }
 
