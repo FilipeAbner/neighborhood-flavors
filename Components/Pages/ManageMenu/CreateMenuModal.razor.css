@@ -1,0 +1,5 @@
+.wrap-text {
+    white-space: wrap;
+    overflow-wrap: break-word;
+    max-width: 93%;
+}

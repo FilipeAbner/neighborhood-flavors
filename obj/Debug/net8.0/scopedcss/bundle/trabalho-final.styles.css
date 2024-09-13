@@ -212,6 +212,40 @@ main[b-mjsnhmwvmr] {
     display: flex;
     align-items: center;
 }
+/* _content/trabalho-final/Components/Pages/ManageMenu/CreateMenuModal.razor.rz.scp.css */
+.wrap-text[b-r3trntn4iz] {
+    white-space: wrap;
+    overflow-wrap: break-word;
+    max-width: 93%;
+}
+/* _content/trabalho-final/Components/Pages/ManageMenu/EditMenuModal.razor.rz.scp.css */
+.wrap-text[b-00we7v2pak] {
+    white-space: wrap;
+    overflow-wrap: break-word;
+    max-width: 93%;
+}
+
+.rating .stars[b-00we7v2pak] {
+    display: flex;
+    justify-content: center;
+}
+
+.rating .star[b-00we7v2pak] {
+    position: relative;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-color: #A9A9A9;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.rating .star-inner[b-00we7v2pak] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #ffcc00;
+}
 /* _content/trabalho-final/Components/Pages/ManageMenu/ManageMenu.razor.rz.scp.css */
 .icon[b-cekdey80d9] {
     fill: white;

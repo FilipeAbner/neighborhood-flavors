@@ -541,3 +541,5 @@ E:/Faculdade/optativas/dot-NET/neighborhood-flavors/obj/Debug/net8.0/ref/trabalh
 /media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/obj/Debug/net8.0/ref/trabalho-final.dll
 /media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/obj/Debug/net8.0/scopedcss/Components/Pages/ManageMenu/ManageMenu.razor.rz.scp.css
 /media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/obj/Debug/net8.0/scopedcss/Components/Pages/ManageMenu/ViewMenuModal.razor.rz.scp.css
+/media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/obj/Debug/net8.0/scopedcss/Components/Pages/ManageMenu/EditMenuModal.razor.rz.scp.css
+/media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/obj/Debug/net8.0/scopedcss/Components/Pages/ManageMenu/CreateMenuModal.razor.rz.scp.css
