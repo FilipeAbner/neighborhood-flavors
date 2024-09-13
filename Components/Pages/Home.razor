@@ -4,11 +4,24 @@
 @inject IJSRuntime JsRuntime
 @inject RestaurantService service
 
+@inject StateContainer stateContainer
+
 <PageTitle>Cardápio</PageTitle>
 
-<div class="top-row px-4">
+@if (String.IsNullOrEmpty(user.Name))
+{
+    <div class="top-row px-4">
     <a href="login">Login</a>
 </div>
+}
+else
+{
+    <div class="top-row">
+    <p>
+        @user.Email
+    </p>
+</div>
+}
 
 <div class="container mt-5">
     <h2 class="text-center">Cardápios de Hoje</h2>
@@ -73,6 +86,14 @@
 </div>
 
 @code {
+    protected override void OnInitialized()
+    {
+        if (stateContainer.CurrentUser is not null)
+        {
+            user = stateContainer.CurrentUser;
+        }
+    }
+    User user = new();
     List<Restaurant> Restaurants = new List<Restaurant>();
     private async Task GetRestaurants()
     {
