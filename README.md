@@ -12,8 +12,6 @@ Permite o cadastro, visualização e avaliação de estabelecimentos, incentivan
 - Entity Framework Core
 - SQL Server
 
-## 📷 Capturas de Tela
-
 
 ## ⚙️ Como Rodar o Projeto
 Pré-requisitos:
@@ -41,3 +39,9 @@ As funcionalidades são bem simples, com fins de aprendizado.
 - Visualização de restaurantes e cardápio
 - Avaliação de estabelecimentos
 - Sistema de comentários
+
+## 📷 Capturas de Tela
+![Logo da Aplicação](./images/Screenshot_1.png)
+![Logo da Aplicação](./images/Screenshot_2.png)
+![Logo da Aplicação](./images/Screenshot_3.png)
+![Logo da Aplicação](./images/Screenshot_4.png)
