@@ -1,0 +1,63 @@
+is_global = true
+build_property.TargetFramework = net8.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = trabalho-final
+build_property.RootNamespace = trabalho-final
+build_property.ProjectDir = /mnt/sda3/Faculdade/optativas/dot-NET/neighborhood-flavors/
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 
+build_property.RazorLangVersion = 8.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = /mnt/sda3/Faculdade/optativas/dot-NET/neighborhood-flavors
+build_property._RazorSourceGeneratorDebug = 
+
+[/mnt/sda3/Faculdade/optativas/dot-NET/neighborhood-flavors/Components/App.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9BcHAucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/sda3/Faculdade/optativas/dot-NET/neighborhood-flavors/Components/Pages/Login.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Mb2dpbi5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/sda3/Faculdade/optativas/dot-NET/neighborhood-flavors/Components/Routes.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9Sb3V0ZXMucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/sda3/Faculdade/optativas/dot-NET/neighborhood-flavors/Components/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9fSW1wb3J0cy5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/mnt/sda3/Faculdade/optativas/dot-NET/neighborhood-flavors/Components/Layout/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvTWFpbkxheW91dC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-mjsnhmwvmr
+
+[/mnt/sda3/Faculdade/optativas/dot-NET/neighborhood-flavors/Components/Layout/NavMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9MYXlvdXQvTmF2TWVudS5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-yh2a18q8g3
+
+[/mnt/sda3/Faculdade/optativas/dot-NET/neighborhood-flavors/Components/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9Ib21lLnJhem9y
+build_metadata.AdditionalFiles.CssScope = b-w3038hx5uu
+
+[/mnt/sda3/Faculdade/optativas/dot-NET/neighborhood-flavors/Components/Pages/ManageMenu/CreateMenuModal.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9NYW5hZ2VNZW51L0NyZWF0ZU1lbnVNb2RhbC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-r3trntn4iz
+
+[/mnt/sda3/Faculdade/optativas/dot-NET/neighborhood-flavors/Components/Pages/ManageMenu/EditMenuModal.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9NYW5hZ2VNZW51L0VkaXRNZW51TW9kYWwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-00we7v2pak
+
+[/mnt/sda3/Faculdade/optativas/dot-NET/neighborhood-flavors/Components/Pages/ManageMenu/ManageMenu.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9NYW5hZ2VNZW51L01hbmFnZU1lbnUucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-cekdey80d9
+
+[/mnt/sda3/Faculdade/optativas/dot-NET/neighborhood-flavors/Components/Pages/ManageMenu/ViewMenuModal.razor]
+build_metadata.AdditionalFiles.TargetPath = Q29tcG9uZW50cy9QYWdlcy9NYW5hZ2VNZW51L1ZpZXdNZW51TW9kYWwucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-6gnk6f680t

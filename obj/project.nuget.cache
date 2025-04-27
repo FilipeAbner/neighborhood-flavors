@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "A7dI9QSAyj9hqKYa4F0nZC2cRzkmlHRl1MXzIcdSUjKVyhU/t1v6OIMrWK1Af5JIz0CtQdgyfmEsELhx8TBNzw==",
+  "dgSpecHash": "0o2KHsHbxgWkWB5hz/v99ckGYJ+6+P7DuQhCDor5F6zfVo2DKz/x1p4erAtCwAyZ543NQpXlVKdOeG0ghvodkA==",
   "success": true,
-  "projectFilePath": "/media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/trabalho-final.csproj",
+  "projectFilePath": "/home/gabrielsizilio/Faculdade/optativas/dot-NET/neighborhood-flavors/trabalho-final.csproj",
   "expectedPackageFiles": [
     "/home/gabrielsizilio/.nuget/packages/blazor.bootstrap/3.0.0/blazor.bootstrap.3.0.0.nupkg.sha512",
     "/home/gabrielsizilio/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",

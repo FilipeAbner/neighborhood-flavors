@@ -5,6 +5,7 @@
 @inject MenuService service
 
 @inject StateContainer stateContainer
+@inject NavigationManager navigationManager
 
 <PageTitle>Restaurante - Cardápios</PageTitle>
 
@@ -110,11 +111,12 @@
 <EditMenuModal @ref="editMenu" OnMenuUpdated="GetMenus" />
 
 @code {
-    protected override void OnInitialized()
+    protected async override void OnInitialized()
     {
         if (stateContainer.CurrentRestaurant is not null)
         {
             restaurant = stateContainer.CurrentRestaurant;
+            await GetMenus();
         }
     }
 

@@ -1,15 +1,15 @@
 {
   "Files": [
     {
-      "Id": "/media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/obj/Debug/net8.0/scopedcss/projectbundle/trabalho-final.bundle.scp.css",
+      "Id": "/home/gabrielsizilio/Faculdade/optativas/dot-NET/neighborhood-flavors/obj/Debug/net8.0/scopedcss/projectbundle/trabalho-final.bundle.scp.css",
       "PackagePath": "staticwebassets/trabalho-final.bundle.scp.css"
     },
     {
-      "Id": "/media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/wwwroot/app.css",
+      "Id": "/home/gabrielsizilio/Faculdade/optativas/dot-NET/neighborhood-flavors/wwwroot/app.css",
       "PackagePath": "staticwebassets/app.css"
     },
     {
-      "Id": "/media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/wwwroot/favicon.png",
+      "Id": "/home/gabrielsizilio/Faculdade/optativas/dot-NET/neighborhood-flavors/wwwroot/favicon.png",
       "PackagePath": "staticwebassets/favicon.png"
     },
     {

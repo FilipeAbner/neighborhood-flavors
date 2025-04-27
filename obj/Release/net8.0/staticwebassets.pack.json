@@ -1,0 +1,33 @@
+{
+  "Files": [
+    {
+      "Id": "/mnt/sda3/Faculdade/optativas/dot-NET/neighborhood-flavors/obj/Release/net8.0/scopedcss/projectbundle/trabalho-final.bundle.scp.css",
+      "PackagePath": "staticwebassets/trabalho-final.bundle.scp.css"
+    },
+    {
+      "Id": "/mnt/sda3/Faculdade/optativas/dot-NET/neighborhood-flavors/wwwroot/app.css",
+      "PackagePath": "staticwebassets/app.css"
+    },
+    {
+      "Id": "/mnt/sda3/Faculdade/optativas/dot-NET/neighborhood-flavors/wwwroot/favicon.png",
+      "PackagePath": "staticwebassets/favicon.png"
+    },
+    {
+      "Id": "obj/Release/net8.0/staticwebassets/msbuild.build.trabalho-final.props",
+      "PackagePath": "build\\trabalho-final.props"
+    },
+    {
+      "Id": "obj/Release/net8.0/staticwebassets/msbuild.buildMultiTargeting.trabalho-final.props",
+      "PackagePath": "buildMultiTargeting\\trabalho-final.props"
+    },
+    {
+      "Id": "obj/Release/net8.0/staticwebassets/msbuild.buildTransitive.trabalho-final.props",
+      "PackagePath": "buildTransitive\\trabalho-final.props"
+    },
+    {
+      "Id": "obj/Release/net8.0/staticwebassets/msbuild.trabalho-final.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

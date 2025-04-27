@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/trabalho-final.csproj": {}
+    "/home/gabrielsizilio/Faculdade/optativas/dot-NET/neighborhood-flavors/trabalho-final.csproj": {}
   },
   "projects": {
-    "/media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/trabalho-final.csproj": {
+    "/home/gabrielsizilio/Faculdade/optativas/dot-NET/neighborhood-flavors/trabalho-final.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/trabalho-final.csproj",
+        "projectUniqueName": "/home/gabrielsizilio/Faculdade/optativas/dot-NET/neighborhood-flavors/trabalho-final.csproj",
         "projectName": "trabalho-final",
-        "projectPath": "/media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/trabalho-final.csproj",
+        "projectPath": "/home/gabrielsizilio/Faculdade/optativas/dot-NET/neighborhood-flavors/trabalho-final.csproj",
         "packagesPath": "/home/gabrielsizilio/.nuget/packages/",
-        "outputPath": "/media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/obj/",
+        "outputPath": "/home/gabrielsizilio/Faculdade/optativas/dot-NET/neighborhood-flavors/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/gabrielsizilio/.nuget/NuGet/NuGet.Config"
@@ -78,7 +78,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.108/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.115/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "I+TDZpHa7cIygc/LxIXzCYEjYRl/xyBIlzFobO4POjo=",
+  "Hash": "ykgp1a7UIKoB9JCkhJicBovYBW9e7OHtndwt0JM/SB4=",
   "Source": "trabalho-final",
   "BasePath": "_content/trabalho-final",
   "Mode": "Default",
@@ -10,7 +10,7 @@
     {
       "Name": "trabalho-final/wwwroot",
       "Source": "trabalho-final",
-      "ContentRoot": "/media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/wwwroot/",
+      "ContentRoot": "/home/gabrielsizilio/Faculdade/optativas/dot-NET/neighborhood-flavors/wwwroot/",
       "BasePath": "_content/trabalho-final",
       "Pattern": "**"
     }
@@ -169,10 +169,10 @@
       "OriginalItemSpec": "/home/gabrielsizilio/.nuget/packages/blazor.bootstrap/3.0.0/staticwebassets/pdfjs-4.0.379.worker.min.js"
     },
     {
-      "Identity": "/media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/obj/Debug/net8.0/scopedcss/bundle/trabalho-final.styles.css",
+      "Identity": "/home/gabrielsizilio/Faculdade/optativas/dot-NET/neighborhood-flavors/obj/Debug/net8.0/scopedcss/bundle/trabalho-final.styles.css",
       "SourceId": "trabalho-final",
       "SourceType": "Computed",
-      "ContentRoot": "/media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/obj/Debug/net8.0/scopedcss/bundle/",
+      "ContentRoot": "/home/gabrielsizilio/Faculdade/optativas/dot-NET/neighborhood-flavors/obj/Debug/net8.0/scopedcss/bundle/",
       "BasePath": "_content/trabalho-final",
       "RelativePath": "trabalho-final.styles.css",
       "AssetKind": "All",
@@ -185,13 +185,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/obj/Debug/net8.0/scopedcss/bundle/trabalho-final.styles.css"
+      "OriginalItemSpec": "/home/gabrielsizilio/Faculdade/optativas/dot-NET/neighborhood-flavors/obj/Debug/net8.0/scopedcss/bundle/trabalho-final.styles.css"
     },
     {
-      "Identity": "/media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/obj/Debug/net8.0/scopedcss/projectbundle/trabalho-final.bundle.scp.css",
+      "Identity": "/home/gabrielsizilio/Faculdade/optativas/dot-NET/neighborhood-flavors/obj/Debug/net8.0/scopedcss/projectbundle/trabalho-final.bundle.scp.css",
       "SourceId": "trabalho-final",
       "SourceType": "Computed",
-      "ContentRoot": "/media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/obj/Debug/net8.0/scopedcss/projectbundle/",
+      "ContentRoot": "/home/gabrielsizilio/Faculdade/optativas/dot-NET/neighborhood-flavors/obj/Debug/net8.0/scopedcss/projectbundle/",
       "BasePath": "_content/trabalho-final",
       "RelativePath": "trabalho-final.bundle.scp.css",
       "AssetKind": "All",
@@ -204,13 +204,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "/media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/obj/Debug/net8.0/scopedcss/projectbundle/trabalho-final.bundle.scp.css"
+      "OriginalItemSpec": "/home/gabrielsizilio/Faculdade/optativas/dot-NET/neighborhood-flavors/obj/Debug/net8.0/scopedcss/projectbundle/trabalho-final.bundle.scp.css"
     },
     {
-      "Identity": "/media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/wwwroot/app.css",
+      "Identity": "/home/gabrielsizilio/Faculdade/optativas/dot-NET/neighborhood-flavors/wwwroot/app.css",
       "SourceId": "trabalho-final",
       "SourceType": "Discovered",
-      "ContentRoot": "/media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/wwwroot/",
+      "ContentRoot": "/home/gabrielsizilio/Faculdade/optativas/dot-NET/neighborhood-flavors/wwwroot/",
       "BasePath": "_content/trabalho-final",
       "RelativePath": "app.css",
       "AssetKind": "All",
@@ -226,10 +226,10 @@
       "OriginalItemSpec": "wwwroot/app.css"
     },
     {
-      "Identity": "/media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/wwwroot/favicon.png",
+      "Identity": "/home/gabrielsizilio/Faculdade/optativas/dot-NET/neighborhood-flavors/wwwroot/favicon.png",
       "SourceId": "trabalho-final",
       "SourceType": "Discovered",
-      "ContentRoot": "/media/gabrielsizilio/Gabriel/Faculdade/optativas/dot-NET/neighborhood-flavors/wwwroot/",
+      "ContentRoot": "/home/gabrielsizilio/Faculdade/optativas/dot-NET/neighborhood-flavors/wwwroot/",
       "BasePath": "_content/trabalho-final",
       "RelativePath": "favicon.png",
       "AssetKind": "All",

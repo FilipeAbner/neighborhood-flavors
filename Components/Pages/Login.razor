@@ -53,9 +53,10 @@
         user = await userService.GetUserByEmailAndPassword(Email, Password);
         if (user != null)
         {
+            stateContainer.Login();
             stateContainer.CurrentUser = user;
-            var restaurant = await restaurantService.GetRestaurantByUserIdAsync(user.Id);
 
+            var restaurant = await restaurantService.GetRestaurantByUserIdAsync(user.Id);
             if (restaurant == null)
             {
                 navigationManager.NavigateTo("/");
