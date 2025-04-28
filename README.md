@@ -48,6 +48,6 @@ As funcionalidades são bem simples, com fins de aprendizado.
 
 ## Contribuidores 😎
 
-| [<img src="https://avatars.githubusercontent.com/u/61943387?v=4" width="100px;" alt="Gabriel Sizilio"/>](https://github.com/gabrielsizilio) | [<img src="https://avatars.githubusercontent.com/u/87715637?v=4" width="100px;" alt="Yodemis"/>](https://github.com/yodemisj) | [<img src="https://avatars.githubusercontent.com/u/72203870?v=4" width="100px;" alt="Filipe Abner"/>](https://github.com/FilipeAbner) |
+| <img src="https://github.com/gabrielsizilio.png" width="60px;"/> | <img src="https://github.com/yodemisj.png" width="60px;"/> | <img src="https://github.com/filipeAbner.png" width="60px;"/> |
 |:---:|:---:|:---:|
 | [@gabrielsizilio](https://github.com/gabrielsizilio) | [@yodemisj](https://github.com/yodemisj) | [@FilipeAbner](https://github.com/FilipeAbner) |
